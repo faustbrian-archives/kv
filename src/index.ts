@@ -1,5 +1,20 @@
 export interface IKeyValueStore<K, T> {
 	/**
+	 * Get all of the items in the store.
+	 */
+	all(): Record<string | number | symbol, T>;
+
+	/**
+	 * Get the keys of the store items.
+	 */
+	keys(): K[];
+
+	/**
+	 * Get the values of the store items.
+	 */
+	values(): T[];
+
+	/**
 	 * Retrieve an item from the store by key.
 	 */
 	get(key: K): T | undefined;
