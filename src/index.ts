@@ -2,7 +2,7 @@ export interface IKeyValueStore<K, T> {
 	/**
 	 * Get all of the items in the store.
 	 */
-	all(): Record<string | number | symbol, T>;
+	all(): Array<[K, T]>;
 
 	/**
 	 * Get the keys of the store items.
