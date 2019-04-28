@@ -3,6 +3,18 @@ import { IKeyValueStore } from "../../src/";
 export class StubStore<K, T> implements IKeyValueStore<K, T> {
 	private readonly store: Map<K, T> = new Map<K, T>();
 
+	public all(): Array<[K, T]> {
+		return [...this.store.entries()];
+	}
+
+	public keys(): K[] {
+		return [...this.store.keys()];
+	}
+
+	public values(): T[] {
+		return [...this.store.values()];
+	}
+
 	public get(key: K): T | undefined {
 		return this.store.get(key);
 	}

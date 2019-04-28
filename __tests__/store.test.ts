@@ -14,6 +14,24 @@ const itemsBool: boolean[] = new Array(5).fill(true);
 let store: StubStore<string, number>;
 beforeEach(() => (store = new StubStore<string, number>()));
 
+it("should get all of the items in the store.", () => {
+	store.putMany(items);
+
+	expect(store.all()).toEqual(Object.entries(items));
+});
+
+it("should get the keys of the store items.", () => {
+	store.putMany(items);
+
+	expect(store.keys()).toEqual(Object.keys(items));
+});
+
+it("should get the values of the store items.", () => {
+	store.putMany(items);
+
+	expect(store.values()).toEqual(Object.values(items));
+});
+
 it("should put an item into the store", () => {
 	expect(store.put("1", 1)).toBeTrue();
 });
