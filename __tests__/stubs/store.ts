@@ -29,9 +29,9 @@ export class StubStore<K, T> implements IKeyValueStore<K, T> {
 		return this.store.has(key);
 	}
 
-	public putMany(values: Record<string | number | symbol, T>): boolean[] {
+	public putMany(values: Array<[K, T]>): boolean[] {
 		// @ts-ignore
-		return Object.keys(values).map(key => this.put(key, values[key]));
+		return values.map((value: [K, T]) => this.put(value[0], value[1]));
 	}
 
 	public has(key: K): boolean {

@@ -32,7 +32,7 @@ export interface IKeyValueStore<K, T> {
 	/**
 	 * Store multiple items in the store.
 	 */
-	putMany(values: Record<string | number | symbol, T>): boolean[];
+	putMany(values: Array<[K, T]>): boolean[];
 
 	/**
 	 * Determine if an item exists in the store.

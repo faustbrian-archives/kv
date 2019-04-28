@@ -15,19 +15,19 @@ let store: StubStore<string, number>;
 beforeEach(() => (store = new StubStore<string, number>()));
 
 it("should get all of the items in the store.", () => {
-	store.putMany(items);
+	store.putMany(Object.entries(items));
 
 	expect(store.all()).toEqual(Object.entries(items));
 });
 
 it("should get the keys of the store items.", () => {
-	store.putMany(items);
+	store.putMany(Object.entries(items));
 
 	expect(store.keys()).toEqual(Object.keys(items));
 });
 
 it("should get the values of the store items.", () => {
-	store.putMany(items);
+	store.putMany(Object.entries(items));
 
 	expect(store.values()).toEqual(Object.values(items));
 });
@@ -37,7 +37,7 @@ it("should put an item into the store", () => {
 });
 
 it("should put many items into the store", () => {
-	expect(store.putMany(items)).toEqual(itemsBool);
+	expect(store.putMany(Object.entries(items))).toEqual(itemsBool);
 });
 
 it("should be missing all items from the store", () => {
@@ -52,11 +52,11 @@ it("should remove an item from the store", () => {
 });
 
 it("should remove many items from the store", () => {
-	expect(store.putMany(items)).toEqual(itemsBool);
+	expect(store.putMany(Object.entries(items))).toEqual(itemsBool);
 	expect(store.forgetMany(Object.keys(items))).toEqual(itemsBool);
 });
 
 it("should remove all items from the store", () => {
-	expect(store.putMany(items)).toEqual(itemsBool);
+	expect(store.putMany(Object.entries(items))).toEqual(itemsBool);
 	expect(store.flush()).toBeTrue();
 });
