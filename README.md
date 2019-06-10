@@ -4,7 +4,7 @@
 
 [![Latest Version](https://badgen.now.sh/npm/v/@keeveestore/keeveestore)](https://www.npmjs.com/package/@keeveestore/keeveestore)
 [![Node Engine](https://badgen.now.sh/npm/node/@keeveestore/keeveestore)](https://www.npmjs.com/package/@keeveestore/keeveestore)
-[![License: MPL-2.0](https://badgen.now.sh/badge/license/MPL-2.0/green)](https://mozilla.org/MPL/2.0/)
+[![License: MPL-2.0](https://badgen.now.sh/badge/license/MPL-2.0/green)](https://mozilla.org/MPL/2.0/) [![Greenkeeper badge](https://badges.greenkeeper.io/keeveestore/keeveestore.svg)](https://greenkeeper.io/)
 
 ## Installation
 
