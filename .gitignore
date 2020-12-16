@@ -1,0 +1,6 @@
+.coverage
+.yarn/build-state.yml
+.yarn/unplugged
+dist
+node_modules
+yarn-error.log
